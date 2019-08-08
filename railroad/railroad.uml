@@ -4,25 +4,200 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_6V_UQLiKEemD1NY2sWKheA" name="railroad">
-    <packagedElement xmi:type="uml:Class" xmi:id="_AeGiALiLEemD1NY2sWKheA" name="Player"/>
-    <packagedElement xmi:type="uml:Class" xmi:id="_vpwKcLmPEemSi8FaTL2Krg" name="Corporation"/>
-    <packagedElement xmi:type="uml:Package" xmi:id="__DxocLmPEemSi8FaTL2Krg" name="Lists">
+    <packagedElement xmi:type="uml:Class" xmi:id="_AeGiALiLEemD1NY2sWKheA" name="Player">
+      <generalization xmi:type="uml:Generalization" xmi:id="_GU5IMLnpEemSi8FaTL2Krg" general="_ClNxcLnpEemSi8FaTL2Krg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7Y6f0LoJEemSi8FaTL2Krg" name="playerlist" visibility="private" type="_HyAdILk-EemXS8ok1OcHyA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vpwKcLmPEemSi8FaTL2Krg" name="Corporation">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Gvv4MLnpEemSi8FaTL2Krg" general="_ClNxcLnpEemSi8FaTL2Krg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__hZV8Ln6EemSi8FaTL2Krg" name="parValue" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TK8AALoJEemSi8FaTL2Krg" name="corporationlist" visibility="private" type="_uMuLwLmPEemSi8FaTL2Krg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_pHeEkLoQEemSi8FaTL2Krg" name="marker" visibility="private" type="_JOVGkLoBEemSi8FaTL2Krg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_hP1qsLn0EemSi8FaTL2Krg" client="_vpwKcLmPEemSi8FaTL2Krg" supplier="_Od8R8Ln0EemSi8FaTL2Krg" contract="_Od8R8Ln0EemSi8FaTL2Krg"/>
+      <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_stXzELn2EemSi8FaTL2Krg" client="_vpwKcLmPEemSi8FaTL2Krg" supplier="_fTRlcLn2EemSi8FaTL2Krg" contract="_fTRlcLn2EemSi8FaTL2Krg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ClNxcLnpEemSi8FaTL2Krg" name="MarketParticipant">
+      <generalization xmi:type="uml:Generalization" xmi:id="_lb0tsLoaEemSi8FaTL2Krg" general="_bd5E8LoaEemSi8FaTL2Krg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AkdrkLnyEemSi8FaTL2Krg" name="name" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_eT8MMLnyEemSi8FaTL2Krg" name="money" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_jgQgELnyEemSi8FaTL2Krg" name="incMoney">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_nRlcoLnyEemSi8FaTL2Krg" name="dif">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FSLicLnzEemSi8FaTL2Krg" name="decMoney">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_HO7jALnzEemSi8FaTL2Krg" name="dif">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="__DxocLmPEemSi8FaTL2Krg" name="lists">
       <packagedElement xmi:type="uml:Class" xmi:id="_HyAdILk-EemXS8ok1OcHyA" name="PlayerList">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_vL31ELliEemSi8FaTL2Krg" name="list" visibility="private" type="_AeGiALiLEemD1NY2sWKheA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_znDm8LliEemSi8FaTL2Krg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_znK7sLliEemSi8FaTL2Krg" value="*"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_h9z-cLoJEemSi8FaTL2Krg" name="players" visibility="private" type="_AeGiALiLEemD1NY2sWKheA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jHTWELoJEemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jHaDwLoJEemSi8FaTL2Krg" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_uMuLwLmPEemSi8FaTL2Krg" name="CorporationList">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_44ys4LmPEemSi8FaTL2Krg" name="list" visibility="private" type="_vpwKcLmPEemSi8FaTL2Krg">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HVx64LmQEemSi8FaTL2Krg"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HV4okLmQEemSi8FaTL2Krg" value="*"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9v2-gLoIEemSi8FaTL2Krg" name="corporations" visibility="private" type="_vpwKcLmPEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_H9jhkLoJEemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_H9rdYLoJEemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_TgvecLnpEemSi8FaTL2Krg" name="CompanyList">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qaI4ELnpEemSi8FaTL2Krg" name="list" visibility="private" type="_PIwxkLnpEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sEoD8LnpEemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sEv_wLnpEemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Od8R8Ln0EemSi8FaTL2Krg" name="TrainList">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VWjvkLn0EemSi8FaTL2Krg" name="trains" visibility="package" type="_c1y9wLnzEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WnMRALn0EemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WnSXoLn0EemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_fTRlcLn2EemSi8FaTL2Krg" name="StationList">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oHz9MLn2EemSi8FaTL2Krg" name="stations" visibility="package" type="_v1wAoLnzEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pGZFULn2EemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pGgaELn2EemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ue37MLodEemSi8FaTL2Krg" name="ShareList">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wX9ZALn3EemSi8FaTL2Krg" name="shares" visibility="private" type="_05d9sLnpEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xMnJELn3EemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xMt2wLn3EemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_QcDgQLn7EemSi8FaTL2Krg" name="stockmarket">
+      <packagedElement xmi:type="uml:Class" xmi:id="_BnREALoAEemSi8FaTL2Krg" name="Field">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_EXodYLoBEemSi8FaTL2Krg" name="value" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GFyBQLoBEemSi8FaTL2Krg" name="colour" visibility="private" type="_7BAPwLoBEemSi8FaTL2Krg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IXQ7sLoBEemSi8FaTL2Krg" name="marker" visibility="private" type="_JOVGkLoBEemSi8FaTL2Krg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XpUUALoCEemSi8FaTL2Krg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XpYlcLoCEemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mIFlgLoUEemSi8FaTL2Krg" name="row" visibility="private" type="_CE8dgLoLEemSi8FaTL2Krg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JOVGkLoBEemSi8FaTL2Krg" name="Marker">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DpM20LoREemSi8FaTL2Krg" name="corporation" visibility="private" type="_vpwKcLmPEemSi8FaTL2Krg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pucvkLoREemSi8FaTL2Krg" name="field" visibility="private" type="_BnREALoAEemSi8FaTL2Krg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_7BAPwLoBEemSi8FaTL2Krg" name="Colour">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_G4XfULoCEemSi8FaTL2Krg" name="yellow"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_I6hkULoCEemSi8FaTL2Krg" name="brown"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Mnvc8LoCEemSi8FaTL2Krg" name="orange"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_OpDNYLoCEemSi8FaTL2Krg" name="non"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_QRRIYLoCEemSi8FaTL2Krg" name="normal"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_QzS3YLoCEemSi8FaTL2Krg" name="start"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_CE8dgLoLEemSi8FaTL2Krg" name="Row">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fO-DgLoSEemSi8FaTL2Krg" name="fields" visibility="private" type="_BnREALoAEemSi8FaTL2Krg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hYy2wLoSEemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rqmy4LoUEemSi8FaTL2Krg" name="market" visibility="private" type="_tzUoULoTEemSi8FaTL2Krg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_tzUoULoTEemSi8FaTL2Krg" name="Market">
+        <generalization xmi:type="uml:Generalization" xmi:id="_mQgS8LoaEemSi8FaTL2Krg" general="_bd5E8LoaEemSi8FaTL2Krg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zt5wYLoTEemSi8FaTL2Krg" name="rows" visibility="private" type="_CE8dgLoLEemSi8FaTL2Krg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0tvcwLoTEemSi8FaTL2Krg" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bd5E8LoaEemSi8FaTL2Krg" name="ShareOwner">
+      <generalization xmi:type="uml:Generalization" xmi:id="_JjlesLoeEemSi8FaTL2Krg" general="_ue37MLodEemSi8FaTL2Krg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_SlytkLnzEemSi8FaTL2Krg" name="materials">
+      <packagedElement xmi:type="uml:Class" xmi:id="_05d9sLnpEemSi8FaTL2Krg" name="Share"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_PIwxkLnpEemSi8FaTL2Krg" name="Company">
+        <generalization xmi:type="uml:Generalization" xmi:id="_Xv6T8LnxEemSi8FaTL2Krg" general="_05d9sLnpEemSi8FaTL2Krg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ytfOULnpEemSi8FaTL2Krg" name="Certificate">
+        <generalization xmi:type="uml:Generalization" xmi:id="_YWImcLnxEemSi8FaTL2Krg" general="_05d9sLnpEemSi8FaTL2Krg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_c1y9wLnzEemSi8FaTL2Krg" name="Train">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_sBYS8Ln6EemSi8FaTL2Krg" name="cost" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_yHXZwLn6EemSi8FaTL2Krg" name="distancePrim" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_2XwQ4Ln6EemSi8FaTL2Krg" name="distanceSec" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_v1wAoLnzEemSi8FaTL2Krg" name="Station">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fxEX4Ln6EemSi8FaTL2Krg" name="cost" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
       </packagedElement>
     </packagedElement>
   </packagedElement>
-  <packagedElement xmi:type="uml:Package" xmi:id="__WEyoLk9EemXS8ok1OcHyA" name="java">
-    <packagedElement xmi:type="uml:Package" xmi:id="_BBnucLk-EemXS8ok1OcHyA" name="util"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_IxO-ELoFEemSi8FaTL2Krg" memberEnd="_IxQMMLoFEemSi8FaTL2Krg _IxQzQLoFEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IxPlILoFEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IxPlIboFEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IxQzQLoFEemSi8FaTL2Krg" name="field" visibility="private" type="_BnREALoAEemSi8FaTL2Krg" association="_IxO-ELoFEemSi8FaTL2Krg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_IxQMMLoFEemSi8FaTL2Krg" name="marker" visibility="private" type="_JOVGkLoBEemSi8FaTL2Krg" aggregation="shared" association="_IxO-ELoFEemSi8FaTL2Krg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IxQMMboFEemSi8FaTL2Krg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IxQMMroFEemSi8FaTL2Krg" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7zm_ILoGEemSi8FaTL2Krg" name="playerlist contains player" visibility="private" memberEnd="_7zoNQroGEemSi8FaTL2Krg _7zo0UroGEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7zoNQLoGEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7zoNQboGEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7zo0UroGEemSi8FaTL2Krg" name="playerlist" visibility="private" type="_HyAdILk-EemXS8ok1OcHyA" association="_7zm_ILoGEemSi8FaTL2Krg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7zoNQroGEemSi8FaTL2Krg" name="players" visibility="private" type="_AeGiALiLEemD1NY2sWKheA" aggregation="composite" association="_7zm_ILoGEemSi8FaTL2Krg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7zo0ULoGEemSi8FaTL2Krg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7zo0UboGEemSi8FaTL2Krg" value="*"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_qUm8MLoHEemSi8FaTL2Krg" value=""/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7MvW8LoHEemSi8FaTL2Krg" name="corporationlist contains corporation" memberEnd="_7MyaQroHEemSi8FaTL2Krg _7MzoYboHEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7MyaQLoHEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7MyaQboHEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7MyaQroHEemSi8FaTL2Krg" name="corporations" visibility="private" type="_vpwKcLmPEemSi8FaTL2Krg" aggregation="composite" association="_7MvW8LoHEemSi8FaTL2Krg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7MzBULoHEemSi8FaTL2Krg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7MzoYLoHEemSi8FaTL2Krg" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7MzoYboHEemSi8FaTL2Krg" name="corporationlist" visibility="private" type="_uMuLwLmPEemSi8FaTL2Krg" association="_7MvW8LoHEemSi8FaTL2Krg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_b1Fd8LoPEemSi8FaTL2Krg" memberEnd="_b1GsEroPEemSi8FaTL2Krg _b1HTIroPEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b1GsELoPEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b1GsEboPEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_b1HTIroPEemSi8FaTL2Krg" name="row" visibility="private" type="_CE8dgLoLEemSi8FaTL2Krg" association="_b1Fd8LoPEemSi8FaTL2Krg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_b1GsEroPEemSi8FaTL2Krg" name="field" visibility="private" type="_BnREALoAEemSi8FaTL2Krg" aggregation="composite" association="_b1Fd8LoPEemSi8FaTL2Krg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b1HTILoPEemSi8FaTL2Krg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b1HTIboPEemSi8FaTL2Krg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_tzjOoLoPEemSi8FaTL2Krg" memberEnd="_tzlq4LoPEemSi8FaTL2Krg _tzmR8boPEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tzlD0LoPEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tzlD0boPEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_tzmR8boPEemSi8FaTL2Krg" name="marker" visibility="private" type="_JOVGkLoBEemSi8FaTL2Krg" association="_tzjOoLoPEemSi8FaTL2Krg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_tzlq4LoPEemSi8FaTL2Krg" name="corporation" type="_vpwKcLmPEemSi8FaTL2Krg" association="_tzjOoLoPEemSi8FaTL2Krg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_wfmy8LoUEemSi8FaTL2Krg" memberEnd="_wfooIboUEemSi8FaTL2Krg _wfp2QLoUEemSi8FaTL2Krg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wfoBELoUEemSi8FaTL2Krg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wfooILoUEemSi8FaTL2Krg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wfp2QLoUEemSi8FaTL2Krg" name="market" visibility="private" type="_tzUoULoTEemSi8FaTL2Krg" association="_wfmy8LoUEemSi8FaTL2Krg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_wfooIboUEemSi8FaTL2Krg" name="rows" visibility="private" type="_CE8dgLoLEemSi8FaTL2Krg" aggregation="composite" association="_wfmy8LoUEemSi8FaTL2Krg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wfpPMLoUEemSi8FaTL2Krg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wfpPMboUEemSi8FaTL2Krg" value="1"/>
+    </ownedEnd>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_GV3E4LliEemSi8FaTL2Krg">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GV46ELliEemSi8FaTL2Krg" source="http://www.eclipse.org/uml2/2.0.0/UML">
